@@ -8,7 +8,7 @@
       "type": "shell",
       "command": "gcc",
       "args": [
-        "-g", "binaries.c"
+        "-g", "2d_arrays.c"
       ],
       "group": {
         "kind": "build",
