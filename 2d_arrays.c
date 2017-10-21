@@ -15,18 +15,18 @@ int print_hourglass(int len, int array[][len], int x, int y) {
   for(int i=x; i<x+3; i++) {
     for(int j=y; j<y+3; j++) {
       if(i != x+1) {
-        printf("%d ", array[i][j]);
+        // printf("%d ", array[i][j]);
         sum += array[i][j];
       } else {
         if(j == y+1) {
           sum += array[i][j];
-          printf("%d ", array[i][j]);
-        } else {
-          printf("  ");
+        //   printf("%d ", array[i][j]);
+        // } else {
+        //   printf("  ");
         }
       }
     }
-    printf("\r\n");
+    // printf("\r\n");
   }
   return sum;
 }
@@ -59,7 +59,7 @@ int main(){
       else {
         if(sum > max) max = sum;
       }
-      printf("%d sum\r\n\n", sum);
+      // printf("%d sum\r\n\n", sum);
     }
   }
   printf("%d\r\n", max);
