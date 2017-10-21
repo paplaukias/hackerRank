@@ -4,17 +4,21 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+typedef struct {
+  char name[32];
+  char phoneNumber[10];
+} PhoneBook;
+
 int main() {
   int n;
   
   scanf("%d", &n);
   if(n < 1 || n > 100000) return 0;
-  char name[n];
-  char phoneNumber[n];  
+  PhoneBook phoneBook[n];
   
   for(int i=0; i<n; i++) {
-    scanf("%s", name[i]);
-    scanf("%s", phoneNumber[i]);
+    scanf("%s", phoneBook[i].name);
+    scanf("%s", phoneBook[i].phoneNumber);
   }
 
   char query[128];
@@ -31,9 +35,9 @@ int main() {
     queryCounter++;
     
     for(int i=0; i<n; i++) {
-      if(strncmp(name[i], query, sizeof(query)) == 0) {
+      if(strncmp(phoneBook[i].name, query, sizeof(query)) == 0) {
         contactExists = true;
-        printf("%s=%s\r\n", name[i], phoneNumber[i]);
+        printf("%s=%s\r\n", phoneBook[i].name, phoneBook[i].phoneNumber);
       }
     }
     if(!contactExists) printf("Not found\r\n");
