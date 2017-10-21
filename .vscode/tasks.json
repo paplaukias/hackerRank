@@ -4,11 +4,11 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "taskName": "build phoneBook.c",
+      "taskName": "build",
       "type": "shell",
       "command": "gcc",
       "args": [
-        "-g", "phoneBook.c"
+        "-g", "recursion/recursion.c"
       ],
       "group": {
         "kind": "build",
