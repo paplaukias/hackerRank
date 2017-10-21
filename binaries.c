@@ -31,6 +31,6 @@ int main() {
   scanf("%d",&n);
   if(n < 1 || n > 1000000) return 0;
   recursive_division(n);
-  printf("\r\n%d\r\n", max);
+  printf("%d\r\n", max);
   return 0;
 }
